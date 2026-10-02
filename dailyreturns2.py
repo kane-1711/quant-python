@@ -4,12 +4,12 @@ def percentchange(old, new):
     return (new-old)*100/old
 
 def volatility(prices):
-    returns=[]
-    for i in range(1, len(prices)):
-      old=prices[i-1]
-      new=prices[i]
-      returns.append(percentchange(old,new))
-    return statistics.stdev(returns)  
+      returns=[]
+      for i in range(1, len(prices)):
+          old=prices[i-1]
+          new=prices[i]
+          returns.append(percentchange(old,new))
+      return statistics.stdev(returns)  
 
 prices1 = [100, 102, 101, 105, 110, 108]
 prices2 = [100, 120, 90, 130, 80, 140]
