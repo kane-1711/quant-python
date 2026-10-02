@@ -11,8 +11,9 @@ def volatility(prices):
           returns.append(percentchange(old,new))
       return statistics.stdev(returns)  
 
-prices1 = [100, 102, 101, 105, 110, 108]
-prices2 = [100, 120, 90, 130, 80, 140]
+if __name__ == "__main__":
+    prices1 = [100, 102, 101, 105, 110, 108]
+    prices2 = [100, 120, 90, 130, 80, 140]
+    print(round(volatility(prices1), 2))
+    print(round(volatility(prices2), 2))
 
-print(round(volatility(prices1),2))
-print(round(volatility(prices2),2))
